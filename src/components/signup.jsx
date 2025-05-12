@@ -103,7 +103,7 @@ const Signup = () => {
                       <input
                         type="email"
                         id="email"
-                        placeholder="Enter your email"
+                        placeholder="Enter email"
                         required
                         className="w-full sm:text-sm border-2 py-1.5 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
                       />
@@ -117,7 +117,7 @@ const Signup = () => {
                       <input
                         type="tel"
                         id="phone"
-                        placeholder="Enter your phone number"
+                        placeholder="Enter phone number"
                         required
                         className="w-full sm:text-sm border-2 py-1.5 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
                       />
