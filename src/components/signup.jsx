@@ -26,7 +26,9 @@ const Signup = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:flex md:items-center lg:flex lg:items-center justify-between">
                   {/* Text Section */}
                   <div>
-                    <h1 className="font-bold text-[2.5rem]">Kick Off Now</h1>
+                    <h1 className="font-bold sm:text-[2.5rem] text-[1.8rem]">
+                      Kick Off Now
+                    </h1>
                     <p>Please fill in this form to create an account!</p>
                   </div>
 
