@@ -11,24 +11,27 @@ const Signup = () => {
 
   return (
     <section className="flex flex-col justify-center items-center px-11 pb-11 pt-3">
-      <div className=" w-[20%] rounded-2xl ml-50 lg:mb-5 lg:flex md:flex sm:hidden">
+      <div className=" w-[20%] rounded-2xl ml-50 lg:flex hidden lg:mb-5 lg:flex md:flex sm:hidden">
         <img src={logo2} alt="" className="h-full w-full " />
       </div>
-      <div className="grid lg:grid-cols-2  md:grid-cols-2 sm:grid-cols-1 items-center justify-between lg:gap-3 md:gap-10">
+      <div className="grid lg:grid-cols-2  md:grid-cols-2 sm:grid-cols-1 items-center  lg:gap-0.5 md:gap-10">
         <div className="lg:flex md:flex  hidden justify-center items-center lg:w-[100%] md:w-[110%]">
           <img src={sign} alt="" className="h-full w-full rounded-2xl" />
         </div>
 
         <div className="flex flex-col items-center justify-center ">
-          <div className="flex items-center sm:bg-stone-100 md:bg-transparent lg:bg-transparent rounded-2xl flex-col min-w-sm lg:-mt-20">
+          <div className="flex items-center py-10 lg:-ml-20 -ml-0 md:py-0 sm:bg-stone-100 bg-stone-100 md:bg-transparent lg:bg-transparent rounded-2xl flex-col min-w-sm lg:-mt-20">
             <div className="space-y-2 w-full">
               <div className="space-y-0.5 pl-7">
-                <div className="lg:flex lg:items-center md:flex md:items-center  sm:grid sm:grid-cols-2 justify-between">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:flex md:items-center lg:flex lg:items-center justify-between">
+                  {/* Text Section */}
                   <div>
                     <h1 className="font-bold text-[2.5rem]">Kick Off Now</h1>
                     <p>Please fill in this form to create an account!</p>
                   </div>
-                  <div className="w-[40%] h-[40%] mr-20 rounded-2xl ml-[9rem] md:hidden lg:hidden">
+
+                  {/* Logo Section - only shows on mobile */}
+                  <div className="w-[40%] h-[40%] justify-self-end rounded-2xl md:hidden lg:hidden">
                     <img
                       src={logo2}
                       alt="Company Logo"
@@ -37,7 +40,7 @@ const Signup = () => {
                   </div>
                 </div>
               </div>
-              <div className="lg:hidden md:hidden sm:h-[0.1rem] sm:bg-neutral-400 sm:w-full lg:h-[0.1rem]"></div>
+              <div className="h-[0.1rem] bg-neutral-400 w-full block md:hidden"></div>
             </div>
 
             <div className="div2 pt-4">
