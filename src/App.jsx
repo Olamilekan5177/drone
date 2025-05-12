@@ -28,12 +28,12 @@ const App = () => {
       <Routes>
         {/* Routes with Header & Footer */}
         <Route element={<DefaultLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           {/* Add more routes here if needed */}
         </Route>
 
         {/* Routes WITHOUT Header & Footer */}
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgetpassword" element={<Forgetpassword />} />
         <Route path="/otpverification" element={<Otpverification />} />
