@@ -1,0 +1,15 @@
+@import "tailwindcss";
+input::placeholder { /* Standard syntax */
+  padding-left: 0.1rem; /* Adjust the value as needed */
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-webkit-contacts-auto-fill-button {
+  display: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.signup-btn:hover {
+background-color: rgb(99, 102, 104);
+}

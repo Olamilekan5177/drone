@@ -1,0 +1,183 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import sign from "../assets/signpic.jpg";
+import logo2 from "../assets/logo2.png";
+
+const Signup = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  return (
+    <section className="flex flex-col justify-center items-center px-11 pb-11 pt-3">
+      <div className=" w-[20%] rounded-2xl ml-50 lg:mb-5 lg:flex md:flex sm:hidden">
+        <img src={logo2} alt="" className="h-full w-full " />
+      </div>
+      <div className="grid lg:grid-cols-2  md:grid-cols-2 sm:grid-cols-1 items-center justify-between lg:gap-3 md:gap-10">
+        <div className="lg:flex md:flex  hidden justify-center items-center lg:w-[100%] md:w-[110%]">
+          <img src={sign} alt="" className="h-full w-full rounded-2xl" />
+        </div>
+
+        <div className="flex flex-col items-center justify-center ">
+          <div className="flex items-center sm:bg-stone-100 md:bg-transparent lg:bg-transparent rounded-2xl flex-col min-w-sm lg:-mt-20">
+            <div className="space-y-2 w-full">
+              <div className="space-y-0.5 pl-7">
+                <div className="lg:flex lg:items-center md:flex md:items-center  sm:grid sm:grid-cols-2 justify-between">
+                  <div>
+                    <h1 className="font-bold text-[2.5rem]">Kick Off Now</h1>
+                    <p>Please fill in this form to create an account!</p>
+                  </div>
+                  <div className="w-[40%] h-[40%] mr-20 rounded-2xl ml-[9rem] md:hidden lg:hidden">
+                    <img
+                      src={logo2}
+                      alt="Company Logo"
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="lg:hidden md:hidden sm:h-[0.1rem] sm:bg-neutral-400 sm:w-full lg:h-[0.1rem]"></div>
+            </div>
+
+            <div className="div2 pt-4">
+              <form className="px-7">
+                <div className="grid grid-cols-2 gap-2 ">
+                  {/* Email */}
+                  <div>
+                    <div className="mt-1">
+                      <input
+                        type="First Name"
+                        id="First Name"
+                        placeholder="First Name"
+                        required
+                        className="w-full sm:text-sm border-2 py-1.5 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Phone Number */}
+
+                  <div>
+                    <div className="mt-1">
+                      <input
+                        type="Last Name"
+                        id="Last Name"
+                        placeholder="Last Name"
+                        required
+                        className="w-full sm:text-sm border-2 py-1.5 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="mt-5">
+                    <input
+                      type="text"
+                      id="organizationName"
+                      placeholder="Enter organization name"
+                      className="w-full sm:text-sm border-2 py-1.5 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-2"></div>
+
+                {/* <div className="mt-5">
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full sm:text-sm border-2 py-1.5 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
+              />
+            </div> */}
+
+                <div className="grid grid-cols-2 gap-2 mt-5">
+                  {/* Email */}
+                  <div>
+                    <div className="mt-1">
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                        className="w-full sm:text-sm border-2 py-1.5 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Phone Number */}
+
+                  <div>
+                    <div className="mt-1">
+                      <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required
+                        className="w-full sm:text-sm border-2 py-1.5 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Password Field with Toggle */}
+                <div className="relative w-full mt-5">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                    className="w-full sm:text-sm border-2 py-1.5 pr-10 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
+                  />
+                  <span
+                    className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+                    onClick={() => setShowPassword((prev) => !prev)}
+                  >
+                    <FontAwesomeIcon
+                      icon={showPassword ? faEyeSlash : faEye}
+                      className="text-black text-sm"
+                    />
+                  </span>
+                </div>
+
+                {/* Confirm Password Field with Toggle */}
+                <div className="relative w-full mt-5">
+                  <input
+                    type={showConfirmPassword ? "text" : "password"}
+                    placeholder="Confirm your password"
+                    className="w-full sm:text-sm border-2 py-1.5 pr-10 border-gray-200 rounded-md bg-gray-200 focus:outline-none focus:ring-0 pl-2"
+                  />
+                  <span
+                    className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+                    onClick={() => setShowConfirmPassword((prev) => !prev)}
+                  >
+                    <FontAwesomeIcon
+                      icon={showConfirmPassword ? faEyeSlash : faEye}
+                      className="text-black text-sm"
+                    />
+                  </span>
+                </div>
+
+                <button className="bg-black w-full text-white py-1.5 px-4 rounded-md mt-5 signup-btn">
+                  Sign Up
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div className="pt-2.5">
+            <p>
+              Already have an account?
+              <Link
+                to="/login"
+                className="text-blue-600 hover:underline pl-1.5"
+              >
+                Login here
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Signup;
