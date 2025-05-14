@@ -78,9 +78,12 @@ const Signup = () => {
   });
 
   return (
-    <section className="flex flex-col justify-center items-center px-11 pb-11 pt-10">
+    <section className="flex flex-col justify-center items-center px-11 pb-11 ">
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 items-center lg:gap-0.5 md:gap-10">
-        <div className="lg:flex md:flex hidden justify-center items-center lg:w-[100%] md:w-[110%]">
+        <div
+          className="lg:flex md:flex hidden justify-center items-center lg:w-[100%] md:w-[110%]
+          "
+        >
           <img
             src={sign}
             alt="Signup illustration"
@@ -89,35 +92,33 @@ const Signup = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center pt-10">
-          <div className="flex items-center justify-center py-10 md:py-0 sm:bg-stone-100 bg-stone-100 md:bg-transparent lg:bg-transparent rounded-2xl flex-col min-w-sm lg:-mt-20">
-            <div className="w-full flex justify-start">
+          <div className="flex items-center justify-center pb-10 md:py-0 sm:bg-stone-100 bg-stone-100 md:bg-transparent lg:bg-transparent rounded-2xl flex-col min-w-sm lg:-mt-20">
+            {/* <div className="w-full flex">
               <div className="w-[40%] rounded-2xl lg:flex md:flex sm:hidden hidden">
                 <img src={logo2} alt="Company Logo" className="h-full w-full" />
               </div>
-            </div>
+            </div> */}
 
             <div className="space-y-2 w-full">
-              <div className="space-y-0.5 pl-7">
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:flex md:items-center lg:flex lg:items-center justify-between">
-                  <div className="">
-                    <h1 className="font-bold sm:text-[2.5rem] text-[1.8rem]">
-                      Kick Off Now
-                    </h1>
-                    <p>Please fill in this form to create an account!</p>
-                  </div>
-                  <div className="w-[80%] h-[80%] justify-self-end rounded-2xl md:hidden lg:hidden">
+              <div className="space-y-0.5 ">
+                <div className="flex flex-col items-start w-full sm:pt-5 px-14 sm:bg-stone-100 bg-stone-100 md:bg-transparent lg:bg-transparent rounded-2xl min-w-sm">
+                  <div className="w-[60%] flex mb-5 md:-ml-13 lg:-ml-15 sm:-ml-15 -ml-12 rounded-2xl">
                     <img
                       src={logo2}
                       alt="Company Logo"
                       className="h-full w-full object-contain"
                     />
                   </div>
+                  <div className="flex flex-col -ml-7">
+                    <h1 className="font-bold sm:text-[2.5rem] text-[1.8rem]">
+                      Kick Off Now
+                    </h1>
+                    <p>Please fill in this form to create an account!</p>
+                  </div>
                 </div>
-              </div>
-              <div className="h-[0.1rem] bg-neutral-400 w-full block md:hidden"></div>
-            </div>
 
-            <div className="div2 pt-4">
+
+              </div>
               <form className="px-7" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-2 gap-2">
                   <div>
@@ -234,18 +235,18 @@ const Signup = () => {
                   Sign Up
                 </button>
                 <div className="w-full mt-5">
-                              <button
-                                onClick={() => googleLogin()}
-                                className="google-login-btn"
-                                aria-label="Google"
-                              >
-                                <FontAwesomeIcon
-                                  icon={faGoogle}
-                                  className="google-logo"
-                                  title="Sign in with Google"
-                                />
-                                <span className="google-text">Google</span>
-                              </button>
+                  <button
+                    onClick={() => googleLogin()}
+                    className="google-login-btn"
+                    aria-label="Google"
+                  >
+                    <FontAwesomeIcon
+                      icon={faGoogle}
+                      className="google-logo"
+                      title="Sign in with Google"
+                    />
+                    <span className="google-text">Google</span>
+                  </button>
                 </div>
               </form>
             </div>
