@@ -23,7 +23,7 @@ const setpassword = () => {
           />
 
           <button className="bg-black text-white py-1.5 rounded-md mt-5 signup-btn">
-            <Link to="/passwordupdated">Continue</Link>
+            <Link to="/Home">Continue</Link>
           </button>
         </div>
       </div>
